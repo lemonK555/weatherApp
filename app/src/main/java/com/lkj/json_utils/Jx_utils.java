@@ -15,15 +15,12 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by LKJ on 2018/6/14.
- */
-
 public class Jx_utils {
 
 
     public All getAll(String jsonData) throws JSONException {
         All all = new All();
+
         JSONObject jsonObject = new JSONObject(jsonData);
         JSONObject result = jsonObject.getJSONObject("result");
         JSONObject realtime = result.getJSONObject("realtime");
@@ -31,10 +28,6 @@ public class Jx_utils {
         JSONObject pm = result.getJSONObject("pm25");
         JSONArray weather = result.getJSONArray("weather");
 
-        Log.d("测试>>>", "getAll: "+getReal(realtime));
-        Log.d("测试>>>", "getAll: "+getLife(life));
-        Log.d("测试>>>", "getAll: "+getPm(pm));
-        Log.d("测试>>>", "getAll: "+getWeather(weather));
         all.setRealtime(getReal(realtime));
         all.setLife(getLife(life));
         all.setPm(getPm(pm));
@@ -111,10 +104,11 @@ public class Jx_utils {
     }
 
     public List<Weather> getWeather(JSONArray weather) throws JSONException {
-        Weather weatherB = new Weather();
+
          List<Weather> allWeather = new ArrayList<>();
         for (int i = 0; i < weather.length(); i++) {
             JSONObject json_weather = weather.getJSONObject(i);
+            Weather weatherB = new Weather();
 
             String weather_date = json_weather.getString("date");//日期
             String weather_week = json_weather.getString("week");//周几
@@ -124,10 +118,12 @@ public class Jx_utils {
             JSONArray weather_info_day = weather_info.getJSONArray("day");
             String weather_highest = weather_info_day.get(2).toString();//最高温
             weatherB.setWeather_date(weather_date);
+
             weatherB.setWeather_week(weather_week);
             weatherB.setWeather_lowest(weather_lowest);
             weatherB.setWeather_highest(weather_highest);
             allWeather.add(weatherB);
+
         }
         return allWeather;
     }

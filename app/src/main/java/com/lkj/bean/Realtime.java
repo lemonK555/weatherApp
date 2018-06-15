@@ -87,3 +87,5 @@ public class Realtime {
         this.real_power = real_power;
     }
 }
+
+
