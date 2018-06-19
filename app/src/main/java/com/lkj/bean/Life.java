@@ -1,10 +1,12 @@
 package com.lkj.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by LKJ on 2018/6/14.
  */
 
-public class Life {
+public class Life implements Serializable{
     String life_kongtiao;//空调情况
     String life_yundong;//运动情况
     String life_ziwaixian;//紫外线情况

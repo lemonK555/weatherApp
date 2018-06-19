@@ -1,10 +1,12 @@
 package com.lkj.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by LKJ on 2018/6/14.
  */
 
-public class Weather {
+public class Weather implements Serializable {
     String weather_date;//日期
     String weather_week;//周几
     String weather_lowest;//最低温

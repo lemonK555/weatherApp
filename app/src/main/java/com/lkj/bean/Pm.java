@@ -1,10 +1,12 @@
 package com.lkj.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by LKJ on 2018/6/14.
  */
 
-public class Pm {
+public class Pm implements Serializable {
     String pm_curPm;
     String pm_pm25_num;
     String pm_pm10_num;

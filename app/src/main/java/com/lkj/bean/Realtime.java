@@ -1,10 +1,12 @@
 package com.lkj.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by LKJ on 2018/6/14.
  */
 
-public class Realtime {
+public class Realtime implements Serializable {
     String real_cityName;//城市名称
     String real_todayDate;//今日日期
     String real_week;//今日周几
