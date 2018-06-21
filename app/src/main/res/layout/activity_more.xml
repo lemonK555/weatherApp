@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.lkj.weatherapp.MoreActivity"
     android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -25,10 +26,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/city_zigong"
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <TextView
+            android:id="@+id/city_zigong"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -40,10 +41,10 @@
             android:text="31°C"/>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/city_chengdu"
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <TextView
+            android:id="@+id/city_chengdu"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -55,10 +56,10 @@
             android:text="31°C"/>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/city_kunming"
         android:layout_width="match_parent"
         android:layout_height="50dp">
         <TextView
+            android:id="@+id/city_kunming"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="match_parent"

@@ -32,6 +32,7 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         Intent intent = getIntent();
         Bundle bundle = intent.getBundleExtra("bundle");
         All all = (All) bundle.getSerializable("details");
+        TextView realtime_cityName_tv = findViewById(R.id.realtime_city);
         TextView realtime_temperature_tv = findViewById(R.id.realtime_temperature);
         TextView realtime_info_tv = findViewById(R.id.realtime_info);
         TextView weather_lowest_temperature_tv = findViewById(R.id.weather_lowest_temperature);
@@ -64,8 +65,11 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         TextView wind_direct_tv = findViewById(R.id.wind_direct);
         TextView wind_power_tv = findViewById(R.id.wind_power);
 
+//        TextView life_kongtiao_tv = findViewById(R.id)
 
 
+
+        realtime_cityName_tv.setText(all.getRealtime().getReal_cityName());
         realtime_temperature_tv.setText(all.getRealtime().getReal_temperature()+"°C");
         realtime_info_tv.setText(all.getRealtime().getReal_info());
         pm_quality.setText(all.getPm().getPm_quality());
@@ -76,17 +80,17 @@ public class DetailsActivity extends AppCompatActivity implements View.OnClickLi
         des_tv.setText(all.getPm().getPm_des());
         wind_direct_tv.setText(all.getRealtime().getReal_direct());
         wind_power_tv.setText(all.getRealtime().getReal_power());
-        weather_lowest_temperature_tv.setText(all.getWeather().get(0).getWeather_lowest());
-        weather_highest_temperature_tv.setText(all.getWeather().get(0).getWeather_highest());
+        weather_lowest_temperature_tv.setText(all.getWeather().get(0).getWeather_lowest()+"°C");
+        weather_highest_temperature_tv.setText(all.getWeather().get(0).getWeather_highest()+"°C / ");
 
-        weather_lowest_temperature_more_1.setText(all.getWeather().get(1).getWeather_lowest());
-        weather_highest_temperature_more_1.setText(all.getWeather().get(1).getWeather_highest());
-        weather_lowest_temperature_more_2.setText(all.getWeather().get(2).getWeather_lowest());
-        weather_highest_temperature_more_2.setText(all.getWeather().get(2).getWeather_highest());
-        weather_lowest_temperature_more_3.setText(all.getWeather().get(3).getWeather_lowest());
-        weather_highest_temperature_more_3.setText(all.getWeather().get(3).getWeather_highest());
-        weather_lowest_temperature_more_4.setText(all.getWeather().get(4).getWeather_lowest());
-        weather_highest_temperature_more_4.setText(all.getWeather().get(4).getWeather_highest());
+        weather_lowest_temperature_more_1.setText(all.getWeather().get(1).getWeather_lowest()+"°C");
+        weather_highest_temperature_more_1.setText(all.getWeather().get(1).getWeather_highest()+"°C / ");
+        weather_lowest_temperature_more_2.setText(all.getWeather().get(2).getWeather_lowest()+"°C");
+        weather_highest_temperature_more_2.setText(all.getWeather().get(2).getWeather_highest()+"°C / ");
+        weather_lowest_temperature_more_3.setText(all.getWeather().get(3).getWeather_lowest()+"°C");
+        weather_highest_temperature_more_3.setText(all.getWeather().get(3).getWeather_highest()+"°C / ");
+        weather_lowest_temperature_more_4.setText(all.getWeather().get(4).getWeather_lowest()+"°C");
+        weather_highest_temperature_more_4.setText(all.getWeather().get(4).getWeather_highest()+"°C / ");
 
         weather_date_more_1.setText(all.getWeather().get(1).getWeather_date());
         weather_date_more_2.setText(all.getWeather().get(2).getWeather_date());
