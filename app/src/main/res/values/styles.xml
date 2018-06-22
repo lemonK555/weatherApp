@@ -46,5 +46,25 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:textColor">#ffffff</item>
     </style>
-
+    <!--管理城市-通用样式-->
+    <style name="more_city">
+        <item name="android:layout_height">70dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--管理城市-tv-通用样式-->
+    <style name="more_city_tv">
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!--管理城市-img-通用样式-->
+    <style name="more_city_img">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@mipmap/scenery</item>
+    </style>
 </resources>
