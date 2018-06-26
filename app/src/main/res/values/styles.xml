@@ -5,7 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">#fff</item>
     </style>
     <style name="RadioGroupButtonStyle">
         <item name="android:button">@null</item>
@@ -42,9 +42,15 @@
     </style>
     <!--更多天气——通用样式-->
     <style name="details_more_weather_item_allStyle">
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">30dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <!--更多天气-图片-->
+    <style name="details_more_weather_item_img">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">30dp</item>
     </style>
     <!--管理城市-通用样式-->
     <style name="more_city">

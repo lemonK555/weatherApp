@@ -11,6 +11,15 @@ public class Weather implements Serializable {
     String weather_week;//周几
     String weather_lowest;//最低温
     String weather_highest;//最高温
+    String weather_img;//天气图片
+
+    public String getWeather_img() {
+        return weather_img;
+    }
+
+    public void setWeather_img(String weather_img) {
+        this.weather_img = weather_img;
+    }
 
     public String getWeather_date() {
         return weather_date;

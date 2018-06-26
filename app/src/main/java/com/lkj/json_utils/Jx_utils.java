@@ -114,14 +114,18 @@ public class Jx_utils {
             String weather_week = json_weather.getString("week");//周几
             JSONObject weather_info = json_weather.getJSONObject("info");
             JSONArray weather_info_dawn = weather_info.getJSONArray("dawn");
-            String weather_lowest = weather_info_dawn.get(2).toString();//最低温
+            String weather_img = weather_info_dawn.get(1).toString();//天气图片
+
             JSONArray weather_info_day = weather_info.getJSONArray("day");
             String weather_highest = weather_info_day.get(2).toString();//最高温
+            JSONArray weather_info_night = weather_info.getJSONArray("night");
+            String weather_lowest = weather_info_night.get(2).toString();//最低温
             weatherB.setWeather_date(weather_date);
 
             weatherB.setWeather_week(weather_week);
             weatherB.setWeather_lowest(weather_lowest);
             weatherB.setWeather_highest(weather_highest);
+            weatherB.setWeather_img(weather_img);
             allWeather.add(weatherB);
 
         }

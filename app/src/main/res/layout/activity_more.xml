@@ -21,7 +21,7 @@
                 android:id="@+id/back_home"
                 android:layout_height="20dp"
                 android:layout_width="30dp"
-                android:background="@mipmap/home"/>
+                android:background="@mipmap/back"/>
         </LinearLayout>
         <TextView
             android:layout_weight="5"
@@ -40,18 +40,25 @@
     <!--页面内容-->
     <LinearLayout
         style="@style/more_city"
-        android:orientation="horizontal">
-        <EditText
-            android:id="@+id/et_area"
-            android:layout_weight="2"
-            android:layout_width="0dp"
-            android:layout_height="50dp"/>
+        android:orientation="horizontal"
+        android:background="#1b1b1b">
         <Button
             android:id="@+id/send_request"
             android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="40dp"
+            android:background="#ff0000"
+            android:textColor="#fff"
+            android:textSize="18dp"
             android:text="获取天气信息" />
+        <EditText
+            android:id="@+id/et_area"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:hint="请输入城市名"
+            android:textColorHint="#fff"
+            android:textColor="#fff"/>
     </LinearLayout>
     <LinearLayout
         style="@style/more_city"

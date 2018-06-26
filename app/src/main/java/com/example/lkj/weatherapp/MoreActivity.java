@@ -21,12 +21,14 @@ public class MoreActivity extends AppCompatActivity implements View.OnClickListe
         TextView chengdu = findViewById(R.id.city_chengdu);
         TextView kunming = findViewById(R.id.city_kunming);
 
+        Button back_home = findViewById(R.id.back_home);
         Button sendRequest = findViewById(R.id.send_request);
 
         zigong.setOnClickListener(this);
         chengdu.setOnClickListener(this);
         kunming.setOnClickListener(this);
         sendRequest.setOnClickListener(this);
+        back_home.setOnClickListener(this);
     }
 
     @Override
@@ -37,6 +39,8 @@ public class MoreActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MoreActivity.this, MainActivity.class);
             intent.putExtra("city", et_area.getText().toString());
             startActivity(intent);
+        }else if(v.getId() == R.id.back_home){
+            finish();
         }else {
             Intent intent = new Intent(MoreActivity.this, MainActivity.class);
             if(v.getId() == R.id.city_chengdu){
